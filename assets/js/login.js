@@ -20,4 +20,26 @@ $(function () {
             }
         }
     });
+
+    // 注册功能
+    $('#reg-form').on('submit', function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
+        $.ajax({
+            type: 'POST',
+            url: 'http://www.liulongbin.top:3007/api/reguser',
+            data: data,
+            success: function (res) {
+                if (res.status === 1) {
+                    // console.log(res);
+                    return alert(res.message)
+                }
+                alert('注册成功')
+            }
+        })
+    })
+
+
+    // 登录功能
+    
 })

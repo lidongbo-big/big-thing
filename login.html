@@ -36,7 +36,7 @@
                 <div class="layui-form-item">
                     <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">登录</button>
                 </div>
-                <div class="layui-form-item goto-reg"> 
+                <div class="layui-form-item goto-reg">
                     <a href="javascript:;" id="quzhuce">去注册</a>
                 </div>
             </form>
@@ -50,26 +50,27 @@
         </div>
         <!-- 表单 -->
         <div class="form-area">
-            <form class="layui-form">
+            <form class="layui-form" id="reg-form">
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-user"></i>
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入账号"
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入账号"
                         autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="text" name="title" required lay-verify="required|pass" placeholder="请输入密码"
+                    <input type="password" name="password" required lay-verify="required|pass" placeholder="请输入密码"
                         autocomplete="off" class="layui-input password">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="text" name="title" required lay-verify="required|repass" placeholder="请再次输入密码"
-                        autocomplete="off" class="layui-input">
+                    <input type="password" required lay-verify="required|repass" placeholder="请再次输入密码" autocomplete="off"
+                        class="layui-input">
                 </div>
                 <div class="layui-form-item">
-                    <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit lay-filter="formDemo">立即注册</button>
+                    <button class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit
+                        lay-filter="formDemo">立即注册</button>
                 </div>
-                <div class="layui-form-item goto-reg"> 
+                <div class="layui-form-item goto-reg">
                     <a href="javascript:;" id="qudenglu">去登录</a>
                 </div>
             </form>
