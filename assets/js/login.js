@@ -32,7 +32,7 @@ $(function () {
         var data = $(this).serialize();
         $.ajax({
             type: 'POST',
-            url: 'http://www.liulongbin.top:3007/api/reguser',
+            url: '/api/reguser',
             data: data,
             success: function (res) {
                 if (res.status === 1) {
@@ -52,7 +52,7 @@ $(function () {
         var data = $(this).serialize()
         $.ajax({
             type: "POST",
-            url: "http://www.liulongbin.top:3007/api/login",
+            url: "/api/login",
             data: data,
             success: function (res) {
                 if (res.status === 1) {
@@ -61,6 +61,7 @@ $(function () {
                 }
                 localStorage.setItem('token', res.token)
                 layer.msg('登录成功')
+                location.href = '/index.html'
             }
         })
     })
