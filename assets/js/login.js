@@ -37,6 +37,7 @@ $(function () {
             success: function (res) {
                 if (res.status === 1) {
                     // console.log(res);
+                    $('#reg-form')[0].reset()
                     return layer.msg(res.message)
                 }
                 layer.msg('注册成功')
@@ -46,5 +47,23 @@ $(function () {
 
 
     // 登录功能
+    $('#login-form').on('submit', function (e) {
+        e.preventDefault()
+        var data = $(this).serialize()
+        $.ajax({
+            type: "POST",
+            url: "http://www.liulongbin.top:3007/api/login",
+            data: data,
+            success: function (res) {
+                if (res.status === 1) {
+                    $('#login-form')[0].reset()
+                   return layer.msg(res.message)
+                }
+                localStorage.setItem('token', res.token)
+                layer.msg('登录成功')
+            }
+        })
+    })
+    
 
 })
