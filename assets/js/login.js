@@ -37,10 +37,11 @@ $(function () {
             success: function (res) {
                 if (res.status === 1) {
                     // console.log(res);
-                    $('#reg-form')[0].reset()
+                    $('#reg-form')[0].reset() //DOM中重置表单的方法
                     return layer.msg(res.message)
                 }
                 layer.msg('注册成功')
+                $('#qudenglu').click()
             }
         })
     })
@@ -66,5 +67,4 @@ $(function () {
         })
     })
     
-
 })
