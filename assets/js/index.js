@@ -1,5 +1,5 @@
 $(function () {
-    $('tuichu').on('click', function (e) {
+    $('#tuichu').on('click', function (e) {
         e.preventDefault()
         layer.confirm('确定退出？', {
             btn: ['确定', '取消'] //按钮
