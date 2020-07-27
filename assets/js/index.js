@@ -19,7 +19,7 @@ function getUserInfo () {
         success: function (res) {
             // console.log(res);
             if (res.status === 1) {
-                return  layer.msg(res.message)
+                return layer.msg(res.message)
             }
             renderHtml(res.data)
         },

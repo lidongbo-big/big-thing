@@ -24,7 +24,8 @@ $(function () {
         .attr('src', url)
         .cropper(options)
     })
-
+    var form = layui.form
+    var layer = layui.layer
     // 确定修该头像
     $('#btnCreateAvatar').on('click', function () {
         var canvas = $image.cropper('getCroppedCanvas', {
@@ -37,9 +38,12 @@ $(function () {
             url: '/my/update/avatar',
             data: { avatar: a },
             success: function (res) {
-                if (res.status === 0) {
+                console.log(res);
+                
+                if (res.status !== 0) {
                     return layer.msg(res.message)
                 }
+                layer.msg('更换成功')
                 window.parent.getUserInfo();
             }
         })
