@@ -6,6 +6,7 @@ $.ajaxPrefilter(function (option) {
     if (option.url.indexOf('/my/') !== -1) {
         option.complete = function (xhr) {
             if (xhr.responseJSON.status === 1) {
+                localStorage.removeItem('token')
                 location.href = '/login.html'
             }
         }
